@@ -62,3 +62,52 @@ const listaAlbuns = document.getElementById("lista-albuns");
 if (listaAlbuns) {
   listaAlbuns.innerHTML = dados.map(criarCard).join("");
 }
+
+// ---------- DETALHES: mostra o álbum cujo id veio na URL ----------
+const areaDetalhe = document.getElementById("detalhe-album");
+
+if (areaDetalhe) {
+  const params = new URLSearchParams(window.location.search);
+  const id = Number(params.get("id"));
+  const album = dados.find(item => item.id === id);
+
+  if (album) {
+    document.title = `${album.titulo} - Duran Duran`;
+
+    areaDetalhe.innerHTML = `
+      <div class="card mb-4 detalhe-principal">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="${album.imagem}" class="img-fluid detalhe-capa" alt="Capa do álbum ${album.titulo}">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body p-4">
+              <h1 class="h2">${album.titulo}</h1>
+              <p class="text-muted">${album.ano}</p>
+              <p>${album.conteudo}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card detalhe-extra">
+        <div class="card-body p-4">
+          <h2 class="h4 mb-3">Outras informações</h2>
+          <ul class="list-unstyled mb-0">
+            <li><strong>Gênero:</strong> ${album.genero}</li>
+            <li><strong>Gravadora:</strong> ${album.gravadora}</li>
+            <li><strong>Produtor:</strong> ${album.produtor}</li>
+            <li><strong>Singles:</strong> ${album.singles.join(", ")}</li>
+          </ul>
+        </div>
+      </div>
+    `;
+  } else {
+    areaDetalhe.innerHTML = `
+      <div class="text-center py-5">
+        <h2>Álbum não encontrado</h2>
+        <a href="index.html" class="btn btn-enviar mt-3">Voltar para a home</a>
+      </div>
+    `;
+  }
+}

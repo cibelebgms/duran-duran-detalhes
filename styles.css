@@ -116,3 +116,26 @@ body {
 .rodape a:hover {
   color: var(--cor-destaque);
 }
+
+
+   detalhes/
+.link-voltar {
+  color: var(--cor-fundo-escuro);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-voltar:hover {
+  color: var(--cor-destaque);
+}
+
+.detalhe-capa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detalhe-principal,
+.detalhe-extra {
+  overflow: hidden;
+}
