@@ -1,1 +1,55 @@
-# duran-duran-detalhes
+## Duran Duran - Discografia
+
+**Nome:** Cibele Gomes
+**Matrícula:** 1640681
+
+Home-page com os álbuns em cards criados dinamicamente pelo JavaScript e página de detalhes (`detalhes.html?id=X`) que mostra as informações do álbum escolhido.
+
+## Home-page
+![Home-page](prints/image.png)
+
+## Página de detalhes
+![Página de detalhes](prints/image%20copy.png)
+
+## Dados JSON (app.js)
+
+```json
+const dados = [
+  {
+    "id": 1,
+    "titulo": "Duran Duran",
+    "ano": 1981,
+    "descricao": "O álbum de estreia da banda, que apresenta o som new wave e sintetizado do grupo.",
+    "conteudo": "Lançado em 1981, o álbum de estreia do Duran Duran apresentou ao mundo a mistura de new wave, sintetizadores e ritmo dançante que se tornaria a marca da banda. O disco trouxe músicas como Planet Earth e Girls on Film, que ajudaram a colocar o grupo no centro da cena pop britânica.",
+    "genero": "New Wave / Synth-pop",
+    "gravadora": "EMI",
+    "produtor": "Colin Thurston",
+    "singles": ["Planet Earth", "Careless Memories", "Girls on Film"],
+    "imagem": "1981.D.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "Rio",
+    "ano": 1982,
+    "descricao": "O segundo álbum, que levou a banda ao sucesso mundial.",
+    "conteudo": "Rio, de 1982, é considerado um dos discos mais importantes da carreira do Duran Duran. Com videoclipes ousados e refrões marcantes, o álbum projetou a banda internacionalmente e reúne músicas como Hungry Like the Wolf, Save a Prayer e a faixa-título.",
+    "genero": "New Wave / Synth-pop",
+    "gravadora": "EMI",
+    "produtor": "Colin Thurston",
+    "singles": ["My Own Way", "Hungry Like the Wolf", "Save a Prayer", "Rio"],
+    "imagem": "RIO.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "Seven and the Ragged Tiger",
+    "ano": 1983,
+    "descricao": "O terceiro álbum, lançado no auge da popularidade da banda.",
+    "conteudo": "Lançado em 1983, Seven and the Ragged Tiger veio no auge da fama do Duran Duran. O disco tem um som mais polido e sofisticado e inclui o sucesso The Reflex, que chegou ao topo das paradas no Reino Unido e nos Estados Unidos.",
+    "genero": "New Wave / Synth-pop",
+    "gravadora": "EMI",
+    "produtor": "Alex Sadkin e Ian Little",
+    "singles": ["Union of the Snake", "New Moon on Monday", "The Reflex"],
+    "imagem": "Seven.ARTR.jpg"
+  }
+];
+```
