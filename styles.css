@@ -1,0 +1,101 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Cores do tema Duran Duran */
+:root {
+  --cor-fundo-escuro: #1a1a2e;
+  --cor-destaque: #e94560;
+}
+
+/* Header */
+.topo-pagina {
+  background-color: var(--cor-fundo-escuro);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topo-pagina .brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.topo-pagina .nav-link {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.topo-pagina .nav-link:hover {
+  color: var(--cor-destaque);
+}
+
+/* Banner */
+.hero-banner img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.hero-banner .txt-intro {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.hero-banner .txt-intro h1 {
+  margin-bottom: 8px;
+}
+
+/* Álbuns */
+.secao-discos h2 {
+  color: var(--cor-fundo-escuro);
+}
+
+.item-album img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Contato */
+.form-contato {
+  background-color: #f4f4f4;
+}
+
+.form-contato h2 {
+  color: var(--cor-fundo-escuro);
+}
+
+.btn-enviar {
+  background-color: var(--cor-destaque);
+  color: #fff;
+}
+
+.btn-enviar:hover {
+  background-color: #c73650;
+  color: #fff;
+}
+
+/* Footer */
+.rodape {
+  background-color: var(--cor-fundo-escuro);
+  color: #fff;
+}
+
+.rodape a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  color: var(--cor-destaque);
+}
